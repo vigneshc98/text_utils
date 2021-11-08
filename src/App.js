@@ -45,8 +45,14 @@ function App() {
         document.title = "Utils-LightMode";
       }
     } else {
-      setmode("light");
-      document.body.classList.add('bg-'+cls);
+      if(mode==='dark'){
+        setmode("dark");
+        document.body.classList.add('bg-'+cls);
+      }else{
+        setmode("light");
+        document.body.classList.add('bg-'+cls);
+      }
+
     }
   };
 
